@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from auth import verify_password, hash_password, create_access_token
-from schemas import UserCreate, UserBase, Token, ProjectCreate, Project as PydanticProject, TokenData
+from schemas import UserCreate, UserBase, Token, ProjectCreate, Project as PydanticProject, TokenData, TokenRequest
 from models import User, Project as MongoProject
 from utils import get_current_user, role_required
 from mongoengine import connect
@@ -18,11 +18,6 @@ connect(
     db=MONGODB_DATABASE,
     host=f'mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@assignment-user-cluster.12fvl.mongodb.net/?retryWrites=true&w=majority&appName=assignment-user-cluster',
 )
-from fastapi import FastAPI, Depends, HTTPException, status
-from auth import verify_password, hash_password, create_access_token
-from schemas import UserCreate, UserBase, Token, ProjectCreate, Project as PydanticProject, TokenData, TokenRequest
-from models import User, Project as MongoProject
-from utils import get_current_user, role_required
 
 app = FastAPI()
 
