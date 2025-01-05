@@ -4,4 +4,4 @@
 ```pip install -r requirements.txt```
 - Run the following command to run the server
 ```uvicorn main:app```
-- Access the server 
+- Access the server on port 8000/docs
