@@ -1,0 +1,7 @@
+python-dotenv
+mongoengine
+fastapi
+uvicorn
+python-jose
+passlib
+bcrypt
